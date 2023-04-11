@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grapmart_product_show/pages/change_password_screen.dart';
 import 'package:grapmart_product_show/pages/login_screen.dart';
 import 'package:grapmart_product_show/pages/product.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home:  Product(),
+      home:  ChangePassword(),
     );
   }
 }

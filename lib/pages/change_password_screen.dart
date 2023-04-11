@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:grapmart_product_show/Models/Auth_model_ChangePass.dart';
+import 'package:grapmart_product_show/controllers/constants/ChangePass_api.dart';
+
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);
 
@@ -9,37 +13,65 @@ class ChangePassword extends StatefulWidget {
 class _ChangePasswordState extends State<ChangePassword> {
   TextEditingController _oldPass = TextEditingController();
   TextEditingController _newPass = TextEditingController();
-  TextEditingController _re_new_pass = TextEditingController();
+  Auth_model_changePass? auth_model_changePass;
+  bool passToggle = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text("hasem dadu"),
-        leading:const Text("tai naki"),
+        title: Center(child: const Text("hasem dadu")),
+        leading: const Text("tai naki"),
+        actions: [Text("bablo ")],
       ),
-      body: Column(
-        children: [
-          TextField(
-            controller:_oldPass ,
-            decoration: InputDecoration(
-              hintText: "age pasword de",
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _oldPass,
+              decoration: const InputDecoration(
+                hintText: "ager password de",
+              ),
             ),
-          ),
-          SizedBox(height: 10,),
-          TextField(
-            controller:_newPass ,
-            decoration: InputDecoration(
-              hintText: "age pasword de",
+            const SizedBox(
+              height: 10,
             ),
-          ),
-          SizedBox(height: 10,),
-          TextField(
-            controller:_newPass ,
-            decoration: InputDecoration(
-              hintText: "age pasword de",
+            TextField(
+              controller: _newPass,
+              decoration: const InputDecoration(
+                hintText: "notun password de ",
+              ),
             ),
-          ),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+                onPressed: () async {
+                  Fluttertoast.showToast(
+                      msg: "This is a Toast message",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 1,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                  auth_model_changePass = await ChangePassApi.mstore(
+                    _oldPass.text,
+                    _newPass.text,
+                  );
+                  setState(() {
+                    Fluttertoast.showToast(
+                        msg: "This is a Toast message",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  });
+                },
+                child: Text("Change_password")),
+          ],
+        ),
       ),
     );
   }
