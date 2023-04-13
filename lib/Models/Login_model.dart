@@ -3,6 +3,7 @@ class Login_model {
   String? message;
   Data? data;
 
+
   Login_model({this.status, this.message, this.data});
 
   Login_model.fromJson(Map<String, dynamic> json) {

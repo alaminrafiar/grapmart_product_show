@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grapmart_product_show/pages/Resent_verify_screen.dart';
+import 'package:grapmart_product_show/pages/Verify_Phone.dart';
 
 void main() {
   runApp( MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home:  Resent_verify(),
+      home:  Verify_phone_screen(),
     );
   }
 }
@@ -27,3 +28,4 @@ class MyApp extends StatelessWidget {
 //4 profile
 // 5/change_password
 // 6/ Resent verify
+// 7/ verify phone

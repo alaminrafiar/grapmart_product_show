@@ -15,14 +15,14 @@ class SinginAPi {
     var response = await http
         .post(Uri.parse(Myconstants.singInUrl), headers: <String, String>{
       'Content-Type': 'application/json',
-      // "api_key": '5267556B58703273357638792F423F45',
+      "api_key": '5267556B58703273357638792F423F45',
       // "Authorization":
       //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWM5MGYyYjc2NmFhY2FlZDliOTkxMiIsIm5hbWUiOiJBYmR1bGxhaCBBbCBNYW11biIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTY3ODEwNTA3OSwiZXhwIjoxNjc4MTkxNDc5fQ.5DKEzq8VAknk8BEFfDSSTASXuQvqHovLdooGFyUwB3g"
 
     }, body: jsonEncode({
-      MyKeyWords.name: name,
-      MyKeyWords.phone: phone,
-      MyKeyWords.password: password,
+      MyKeyallWords.name: name,
+      MyKeyallWords.phone: phone,
+      MyKeyallWords.password: password,
     }));
 
     if (response.statusCode==200){
