@@ -11,8 +11,8 @@ class ChangePassword extends StatefulWidget {
 }
 
 class _ChangePasswordState extends State<ChangePassword> {
-  TextEditingController _oldPass = TextEditingController();
-  TextEditingController _newPass = TextEditingController();
+  final TextEditingController _oldPass = TextEditingController();
+  final TextEditingController _newPass = TextEditingController();
   Auth_model_changePass? auth_model_changePass;
   bool passToggle = true;
 
@@ -20,9 +20,9 @@ class _ChangePasswordState extends State<ChangePassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text("hasem dadu")),
+        title: const Center(child: Text("hasem dadu")),
         leading: const Text("tai naki"),
-        actions: [Text("bablo ")],
+        actions: const [Text("bablo ")],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -69,7 +69,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                         fontSize: 16.0);
                   });
                 },
-                child: Text("Change_password")),
+                child: const Text("Change_password")),
           ],
         ),
       ),

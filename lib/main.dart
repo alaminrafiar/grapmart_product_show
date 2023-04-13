@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grapmart_product_show/pages/change_password_screen.dart';
-import 'package:grapmart_product_show/pages/login_screen.dart';
-import 'package:grapmart_product_show/pages/product.dart';
-
-import 'package:grapmart_product_show/pages/singin_page.dart';
+import 'package:grapmart_product_show/pages/Resent_verify_screen.dart';
 
 void main() {
   runApp( MyApp());
@@ -19,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home:  ChangePassword(),
+      home:  Resent_verify(),
     );
   }
 }
@@ -27,5 +23,7 @@ class MyApp extends StatelessWidget {
 // ai porjonto ja ja hoise amr ak
 // 1 login
 //2 product
-//3registation
+//3/registation
 //4 profile
+// 5/change_password
+// 6/ Resent verify
